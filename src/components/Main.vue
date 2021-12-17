@@ -18,7 +18,7 @@
           v-for="(news, id) in mainHeadlines.general.slice(0, 4)"
           :key="id"
           :news="news"
-          :variants="{ hideDesc: true, width: 200 }"
+          :variants="{ hideDesc: true, width: 180 }"
         />
       </div>
     </section>
@@ -65,5 +65,11 @@ section {
 .other-headlines {
   display: flex;
   gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  .other-headlines {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 </style>
